@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETROP - Gérer les profils types</title>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/profils.css">
+    
+    <link rel="icon" href="images/etrop.png" type="image/png">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="w3-container w3-teal w3-padding-32 w3-center">
+        <a href="index.html">
+            <img src="images/etrop.png" alt="logo" class="logo"> 
+        </a>
+        <h1 class="w3-xxxlarge w3-text-white">ETROP</h1>
+    </header>
+
+    <!-- USER INFO -->
+    <div class="user-info w3-container w3-right-align w3-row w3-responsive">
+        <div class="w3-col s4 m2 l1">
+            <img src="images/etrop2.png" alt="User Profile" class="user-image">
+        </div>
+        <div class="w3-col s8 m10 l11">
+            <span class="user-name w3-large w3-text-teal">Florent Madelaine</span>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="w3-bar w3-border w3-center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Mes applications</a>
+        <a href="mesdroits.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Mes droits</a>
+        <a href="demandes.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Demande de droits</a>
+        <a href="gérerdroits.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Gérer les droits</a>
+        <a href="profils.html" class="w3-bar-item w3-button w3-hover-teal w3-block w3-teal">Gérer les profils types</a>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-container">
+
+        <!-- Section de gauche -->
+        <div class="left-section">
+            <h2>Profils types</h2>
+
+            <!-- Barre de recherche de profils -->
+            <input type="text" id="searchProfile" onkeyup="searchProfiles()" placeholder="Rechercher un profil..." class="w3-input w3-border">
+
+            <!-- Bouton pour créer un nouveau profil -->
+            <button onclick="openCreateProfileModal()" class="w3-button w3-green w3-round">Créer un nouveau profil</button>
+
+            <!-- Liste des profils types -->
+            <ul id="profileList" class="w3-ul">
+                <li><a href="#">Administrateur</a></li>
+                <li><a href="#">Gestionnaire</a></li>
+                <li><a href="#">Utilisateur Standard</a></li>
+                <li><a href="#">Invité</a></li>
+                <li><a href="#">Technicien Support</a></li>
+                <li><a href="#">Développeur</a></li>
+            </ul>
+        </div>
+
+       <!-- Section de droite -->
+<div class="right-section">
+    <h2 class="section-title">Gérer les applications et droits</h2>
+
+    <!-- Barre de recherche d'applications -->
+    <input type="text" id="searchApp" placeholder="Rechercher une application..." class="w3-input w3-border">
+
+    <!-- Boutons ajouter application, importer, exporter -->
+    <div class="w3-bar">
+        <button class="w3-bar-item w3-button w3-blue">Ajouter appli</button>
+        <button class="w3-bar-item w3-button w3-blue">Importer <i class="fas fa-download"></i></button>
+        <button class="w3-bar-item w3-button w3-blue">Exporter <i class="fas fa-upload"></i></button>
+    </div>
+
+    <!-- Liste des applications et droits -->
+    <div class="w3-card w3-white w3-padding">
+        <h3>GestionPro</h3>
+        <p>— Lecture</p>
+        <p>— Écriture</p>
+    </div>
+
+    <div class="w3-card w3-white w3-padding">
+        <h3>AdminMaster</h3>
+        <p>— Administrateur</p>
+        <p>— Consultation</p>
+    </div>
+
+    <div class="w3-card w3-white w3-padding">
+        <h3>FlowTask</h3>
+        <p>— Gestion</p>
+        <p>— Exécution</p>
+    </div>
+</div>
+
+        <!-- Modale de création de profil -->
+        <div id="createProfileModal" class="w3-modal">
+            <div class="w3-modal-content w3-animate-top w3-card-4">
+                <header class="w3-container w3-blue">
+                    <span onclick="closeCreateProfileModal()" class="w3-button w3-display-topright">&times;</span>
+                    <h2>Créer un nouveau profil</h2>
+                </header>
+                <div class="w3-container">
+                    <label for="profileName" class="w3-text-gray">Nom du profil :</label>
+                    <input type="text" id="profileName" class="w3-input w3-border" placeholder="Nom du profil...">
+
+                    <h3 class="w3-text-gray">Applications et droits :</h3>
+                    <div class="w3-container w3-border w3-padding app-rights-list">
+                        <!-- GestionPro -->
+                        <div class="app-rights">
+                            <strong>GestionPro</strong>
+                            <label class="w3-check">
+                                <input type="checkbox" name="gestionpro-rights" value="lecture"> Lecture
+                            </label>
+                            <label class="w3-check">
+                                <input type="checkbox" name="gestionpro-rights" value="ecriture"> Écriture
+                            </label>
+                        </div>
+                        <!-- AdminMaster -->
+                        <div class="app-rights">
+                            <strong>AdminMaster</strong>
+                            <label class="w3-check">
+                                <input type="checkbox" name="adminmaster-rights" value="administrateur"> Administrateur
+                            </label>
+                            <label class="w3-check">
+                                <input type="checkbox" name="adminmaster-rights" value="consultation"> Consultation
+                            </label>
+                        </div>
+                        <!-- FlowTask -->
+                        <div class="app-rights">
+                            <strong>FlowTask</strong>
+                            <label class="w3-check">
+                                <input type="checkbox" name="flowtask-rights" value="gestion"> Gestion
+                            </label>
+                            <label class="w3-check">
+                                <input type="checkbox" name="flowtask-rights" value="execution"> Exécution
+                            </label>
+                        </div>
+                    </div>  
+                    <button class="w3-button w3-green" id="createProfileBtn" onclick="createProfile()">Créer le profil</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="w3-container w3-padding-16 w3-center w3-row-padding" style="background-color: #1f80d2;">
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Liens rapides</h4>
+            <p><a href="index.html" class="w3-text-white w3-hover-text-light-grey">Mes applications</a></p>
+            <p><a href="mesdroits.html" class="w3-text-white w3-hover-text-light-grey">Mes droits</a></p>
+            <p><a href="demandes.html" class="w3-text-white w3-hover-text-light-grey">Demander des droits</a></p>
+            <p><a href="gérerdroits.html" class="w3-text-white w3-hover-text-light-grey">Gérer les droits</a></p>
+            <p><a href="profils.html" class="w3-text-white w3-hover-text-light-grey">Gérer les profils types</a></p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Contact</h4>
+            <p class="w3-text-white">Email : contact@etrop.com</p>
+            <p class="w3-text-white">Téléphone : +33 1 23 45 67 89</p>
+            <p class="w3-text-white">Adresse : 123, Rue de l'Innovation, Paris</p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Suivez-nous</h4>
+            <a href="https://facebook.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <!-- SCRIPT -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

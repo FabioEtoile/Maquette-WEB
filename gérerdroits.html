@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETROP</title>
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/gererdroits.css">
+    <link rel="icon" href="images/etrop.png" type="image/png">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="w3-container w3-teal w3-padding-32 w3-center">
+        <a href="index.html"><img src="images/etrop.png" alt="logo" class="logo"></a>
+        <h1 class="w3-xxxlarge w3-text-white">ETROP</h1>
+    </header>
+
+    <!-- USER INFO -->
+    <div class="user-info w3-container w3-right-align w3-row w3-responsive">
+        <div class="w3-col s4 m2 l1"><img src="images/etrop2.png" alt="User Profile" class="user-image"></div>
+        <div class="w3-col s8 m10 l11"><span class="user-name w3-large w3-text-teal">Florent Madelaine</span></div>
+    </div>
+    
+    <!-- NAVIGATION -->
+    <nav class="w3-bar w3-border w3-center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Mes applications</a>
+        <a href="mesdroits.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Mes droits</a>
+        <a href="demandes.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Demande de droits</a>
+        <a href="gérerdroits.html" class="w3-bar-item w3-button w3-hover-teal w3-block w3-teal">Gérer les droits</a>
+        <a href="profils.html" class="w3-bar-item w3-button w3-hover-teal w3-block">Gérer les profils types</a>
+    </nav>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+        <!-- Section des applications -->
+        <div class="left-section">
+            <h2 class="section-title">Mes applications</h2>
+            <!-- Barre de recherche d'applications -->
+            <input type="text" id="searchApp" placeholder="Rechercher une application..." class="w3-input w3-border">
+
+            <!-- Applications -->
+            <div class="section">
+                <div class="section-title" onclick="toggleSection('adminApps')">
+                    Administration <span class="arrow">▼</span>
+                </div>
+                <div id="frequentApps" class="section-content">
+                    <div class="app-container">
+                        <div class="app-box w3-card">Adminix</div>
+                        <div class="app-box w3-card">Regulix</div>
+                        <div class="app-box w3-card">BureauFlex</div>
+                        <div class="app-box w3-card">ManagePro</div>
+                        <div class="app-box w3-card">AdminMaster</div>
+                        <div class="app-box w3-card">CoreManage</div>
+                        <div class="app-box w3-card">ControlNet</div>
+                        <div class="app-box w3-card">SystemDirect</div>
+                        <div class="app-box w3-card">AdminSuite</div>
+                        <div class="app-box w3-card">AdminFlow</div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="section">
+                <div class="section-title" onclick="toggleSection('managementApps')">Gestion <span class="arrow">▼</span></div>
+                <div id="managementApps" class="section-content">
+                    <div class="app-container">
+                        <div class="app-box w3-card">Enut</div>
+                        <div class="app-box w3-card">Ednalg</div>
+                        <div class="app-box w3-card">Maps</div>
+                        <div class="app-box w3-card">OptiGest</div>
+                        <div class="app-box w3-card">ManagerX</div>
+                        <div class="app-box w3-card">FlowTask</div>
+                        <div class="app-box w3-card">ProPlans</div>
+                        <div class="app-box w3-card">TaskFlex</div>
+                        <div class="app-box w3-card">StratManager</div>
+                        <div class="app-box w3-card">GestionPro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+        <div class="right-section w3-card">
+            <h2>Gérer les droits</h2>
+            
+            <!-- Barre de recherche d'utilisateur -->
+            <input type="text" id="searchUser" placeholder="Rechercher un utilisateur..." class="w3-input w3-border w3-round-large">
+        
+            <!-- Informations utilisateur -->
+            <div class="user-info-card w3-card w3-padding w3-margin-bottom">
+                <h3>Informations utilisateur</h3>
+                <p><strong>Prénom :</strong> John</p>
+                <p><strong>Nom :</strong> Doe</p>
+                <p><strong>Poste :</strong> Directeur</p>
+            </div>
+        
+            <!-- Profils types -->
+            <div class="profiles-card w3-card w3-padding w3-margin-bottom">
+                <h3>Profils types</h3>
+                <ul>
+                    <li>Super Admin</li>
+                    <li>Responsable RH</li>
+                    <li>Employé</li>
+                </ul>
+            </div>
+        
+            <!-- Droits sur l'application -->
+            <div class="rights-card w3-card w3-padding w3-margin-bottom">
+                <h3>Droits sur l'application Adminix</h3>
+                <ul>
+                    <li>Gestion des applications </li>
+                    <li>Attribution de profils types</li>
+                    <li>Gestion des applications </li>
+                </ul>
+            </div>
+        </div>
+    </div>          
+
+    <!-- FOOTER -->
+    <footer class="w3-container w3-padding-16 w3-center w3-row-padding" style="background-color: #1f80d2;">
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Liens rapides</h4>
+            <p><a href="index.html" class="w3-text-white w3-hover-text-light-grey">Mes applications</a></p>
+            <p><a href="mesdroits.html" class="w3-text-white w3-hover-text-light-grey">Mes droits</a></p>
+            <p><a href="demandes.html" class="w3-text-white w3-hover-text-light-grey">Demander des droits</a></p>
+            <p><a href="gérerdroits.html" class="w3-text-white w3-hover-text-light-grey">Gérer les droits</a></p>
+            <p><a href="profils.html" class="w3-text-white w3-hover-text-light-grey">Profils types</a></p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Contact</h4>
+            <p class="w3-text-white">Email : contact@etrop.com</p>
+            <p class="w3-text-white">Téléphone : +33 1 23 45 67 89</p>
+            <p class="w3-text-white">Adresse : 123, Rue de l'Innovation, Paris</p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Suivez-nous</h4>
+            <a href="https://facebook.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

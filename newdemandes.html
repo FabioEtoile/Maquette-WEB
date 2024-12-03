@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETROP - Nouvelle demande de droits</title>
+
+   
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="css/demandes.css">
+
+
+    <link rel="icon" href="images/etrop.png" type="image/png">
+</head>
+<body>
+
+    
+    <header class="w3-container w3-teal w3-padding-32 w3-center">
+        <a href="index.html">
+            <img src="images/etrop.png" alt="logo" class="logo"> 
+        </a>
+        <h1 class="w3-xxxlarge w3-text-white">ETROP</h1>
+    </header>
+
+ 
+    <div class="user-info w3-container w3-right-align w3-row w3-responsive">
+        <div class="w3-col s4 m2 l1">
+            <img src="images/etrop2.png" alt="User Profile" class="user-image">
+        </div>
+        <div class="w3-col s8 m10 l11">
+            <span class="user-name w3-large w3-text-teal">Florent Madelaine</span>
+        </div>
+    </div>
+
+
+    <nav class="w3-bar w3-border w3-center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-teal">Mes applications</a>
+        <a href="mesdroits.html" class="w3-bar-item w3-button w3-hover-teal">Mes droits</a>
+        <a href="demandes.html" class="w3-bar-item w3-button w3-hover-teal w3-teal">Demande de droits</a> 
+        <a href="gérerdroits.html" class="w3-bar-item w3-button w3-hover-teal">Gérer les droits</a>
+        <a href="profils.html" class="w3-bar-item w3-button w3-hover-teal">Gérer les profils types</a>
+    </nav>
+
+
+    <div class="w3-container w3-padding-16">
+        <h2>Formulaire de demande de droits</h2>
+        <form class="w3-container w3-card-4 w3-padding-16" action="#">
+            
+            <!-- Bénéficiaire -->
+            <div class="w3-section">
+                <label for="beneficiary">Bénéficiaire</label>
+                <input class="w3-input w3-border" type="text" id="beneficiary" name="beneficiary" placeholder="Nom du bénéficiaire" required>
+            </div>
+
+            <!-- Destinataire -->
+            <div class="w3-section">
+                <label for="recipient">Destinataire</label>
+                <select class="w3-select w3-border" id="recipient" name="recipient" required>
+                    <option value="" disabled selected>Choisissez le destinataire (hiérarchie)</option>
+                    <option value="manager">Manager</option>
+                    <option value="directeur">Directeur</option>
+                    <option value="rh">Responsable RH</option>
+                </select>
+            </div>
+
+            <!-- Type de demande -->
+            <div class="w3-section">
+                <label for="requestType">Type de demande</label>
+                <select class="w3-select w3-border" id="requestType" name="requestType" required>
+                    <option value="" disabled selected>Choisissez le type de demande</option>
+                    <option value="gestion-utilisateurs">Gestion des utilisateurs</option>
+                    <option value="accès-applications">Accès aux applications</option>
+                    <option value="droits-administratifs">Droits administratifs</option>
+                </select>
+            </div>
+
+            <!-- Description de la demande -->
+            <div class="w3-section">
+                <label for="description">Description</label>
+                <textarea class="w3-input w3-border" id="description" name="description" rows="4" placeholder="Expliquez votre demande ici..." required></textarea>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="w3-panel w3-light-grey w3-small w3-border">
+                <p><strong><em>Soyez précis dans votre demande sinon les gestionnaires ne pourront pas répondre à votre requête. L’équipe d’administration vous recommande toutefois de rester au maximum factuel.</em></strong></p>
+            </div>
+
+       
+            <div class="w3-section w3-right-align">
+                <button type="reset" class="w3-button w3-red">Annuler</button>
+                <button type="submit" class="w3-button w3-teal">Valider</button>
+            </div>
+        </form>
+    </div>
+
+  
+    <footer class="w3-container w3-padding-16 w3-center w3-row-padding" style="background-color: #1f80d2;">
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Liens rapides</h4>
+            <p><a href="index.html" class="w3-text-white w3-hover-text-light-grey">Mes applications</a></p>
+            <p><a href="mesdroits.html" class="w3-text-white w3-hover-text-light-grey">Mes droits</a></p>
+            <p><a href="demandes.html" class="w3-text-white w3-hover-text-light-grey">Demander des droits</a></p>
+            <p><a href="gérerdroits.html" class="w3-text-white w3-hover-text-light-grey">Gérer les droits</a></p>
+            <p><a href="profils.html" class="w3-text-white w3-hover-text-light-grey">Profils types</a></p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Contact</h4>
+            <p class="w3-text-white">Email : contact@etrop.com</p>
+            <p class="w3-text-white">Téléphone : +33 1 23 45 67 89</p>
+            <p class="w3-text-white">Adresse : 123, Rue de l'Innovation, Paris</p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Suivez-nous</h4>
+            <a href="https://facebook.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

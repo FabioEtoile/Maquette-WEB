@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ETROP - Demande de droits</title>
+
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="css/demandes.css">
+
+
+    <link rel="icon" href="images/etrop.png" type="image/png">
+</head>
+<body>
+
+    <header class="w3-container w3-teal w3-padding-32 w3-center">
+        <a href="index.html">
+            <img src="images/etrop.png" alt="logo" class="logo"> 
+        </a>
+        <h1 class="w3-xxxlarge w3-text-white">ETROP</h1>
+    </header>
+
+
+    <div class="user-info w3-container w3-right-align w3-row w3-responsive">
+        <div class="w3-col s4 m2 l1">
+            <img src="images/etrop2.png" alt="User Profile" class="user-image">
+        </div>
+        <div class="w3-col s8 m10 l11">
+            <span class="user-name w3-large w3-text-teal">Florent Madelaine</span>
+        </div>
+    </div>
+
+
+    <nav class="w3-bar w3-border w3-center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-teal">Mes applications</a>
+        <a href="mesdroits.html" class="w3-bar-item w3-button w3-hover-teal">Mes droits</a>
+        <a href="demandes.html" class="w3-bar-item w3-button w3-hover-teal w3-teal">Demande de droits</a>
+        <a href="gérerdroits.html" class="w3-bar-item w3-button w3-hover-teal">Gérer les droits</a>
+        <a href="profils.html" class="w3-bar-item w3-button w3-hover-teal">Gérer les profils types</a>
+    </nav>
+
+
+    <div class="main-container">
+
+       
+        <div class="w3-row demandes-container">
+
+          
+            <div class="w3-col l2 m12 w3-card-4 left-section">
+                <h3 class="w3-padding">Mes demandes</h3>
+                <ul class="demand-list w3-ul w3-hoverable">
+                    <li class="demand-item w3-padding">
+                        <span>Gaston - RH section 4</span>
+                        <i class="fas fa-clock status-icon status-pending"></i>
+                    </li>
+                    <li class="demand-item w3-padding">
+                        <span>Jean - Manager</span>
+                        <i class="fas fa-check-circle status-icon status-accepted"></i>
+                    </li>
+                    <li class="demand-item w3-padding">
+                        <span>Marie - Administratif</span>
+                        <i class="fas fa-times-circle status-icon status-refused"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section droite : Demandes pour gestionnaires -->
+            <div class="w3-col l2 m12 w3-card-4 right-section">
+                <h3 class="w3-padding">Demandes (gestionnaires)</h3>
+                <ul class="demand-list w3-ul w3-hoverable">
+                    <li class="demand-item w3-padding">
+                        <span>Paul - Service commercial</span>
+                        <i class="fas fa-clock status-icon status-pending"></i>
+                    </li>
+                    <li class="demand-item w3-padding">
+                        <span>Sophie - Support IT</span>
+                        <i class="fas fa-check-circle status-icon status-accepted"></i>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section droite : Nouvelle demande et détails de la demande -->
+            <div class="w3-col l8 m12 w3-card-4 details-section">
+                <div class="new-request-container">
+                    <a href="newdemandes.html">
+                        <button class="w3-button w3-blue btn-new-request"><i class="fas fa-plus"></i> Nouvelle demande</button>
+                    </a>
+                </div>
+                
+                <!-- Section droite : Détails de la demande sélectionnée -->
+                <div class="search-filter-container">
+                    <input type="text" id="searchApp" placeholder="Rechercher une demande..." class="search-bar">
+                    <button class="filter-button"><i class="fas fa-filter"></i> Filtrer</button>
+                </div>
+
+                <div class="details-section-header">
+                    <h3 class="details-header">Détails de la demande</h3>
+                    <button class="w3-button w3-blue btn-transfer"><i class="fas fa-share"></i> Transférer</button>
+                </div>
+                
+                <div class="details-metadata">
+                    <div class="author">Auteur : Gaston</div>
+                    <div class="date">Date : 05/10/2024</div>
+                </div>
+                
+                <div class="details-content w3-padding w3-light-grey">
+                    <p><strong>Demandeur :</strong> Gaston - RH section 4</p>
+                    <p><strong>Objet :</strong> Droits de gestion des utilisateurs</p>
+                    <p><strong>Status :</strong> En attente</p>
+                    <p><strong>Justification :</strong> Accès nécessaire pour gérer les droits du personnel.</p>
+                </div>
+
+                <!-- Boutons pour accepter ou refuser la demande -->
+                <div class="btn-container w3-margin-top">
+                    <button class="w3-button w3-green btn-accept"><i class="fas fa-check"></i> Accepter</button>
+                    <button class="w3-button w3-red btn-refuse"><i class="fas fa-times"></i> Refuser</button>
+                </div>
+            </div>
+
+        </div> 
+    </div>
+
+
+    <footer class="w3-container w3-padding-16 w3-center w3-row-padding" style="background-color: #1f80d2;">
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Liens rapides</h4>
+            <p><a href="index.html" class="w3-text-white w3-hover-text-light-grey">Mes applications</a></p>
+            <p><a href="mesdroits.html" class="w3-text-white w3-hover-text-light-grey">Mes droits</a></p>
+            <p><a href="demandes.html" class="w3-text-white w3-hover-text-light-grey">Demander des droits</a></p>
+            <p><a href="gérerdroits.html" class="w3-text-white w3-hover-text-light-grey">Gérer les droits</a></p>
+            <p><a href="profils.html" class="w3-text-white w3-hover-text-light-grey">Profils types</a></p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Contact</h4>
+            <p class="w3-text-white">Email : contact@etrop.com</p>
+            <p class="w3-text-white">Téléphone : +33 1 23 45 67 89</p>
+            <p class="w3-text-white">Adresse : 123, Rue de l'Innovation, Paris</p>
+        </div>
+
+        <div class="w3-third w3-col s12 m4">
+            <h4 class="w3-text-white">Suivez-nous</h4>
+            <a href="https://facebook.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-facebook"></i></a>
+            <a href="https://linkedin.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" class="w3-button w3-hover-none"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
