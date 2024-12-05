@@ -3,7 +3,7 @@
 ## Description
 Ce projet consiste en la création d'une maquette web pour le cours de développement d'interfaces homme-machine (IHM) en deuxième année de BUT Informatique. L'objectif est de concevoir une interface utilisateur claire et fonctionnelle à travers une maquette, sans fonctionnalité réelle, mais avec une présentation réaliste de ce à quoi pourrait ressembler l'application finale.
 
-Le site a été réalisé à partir de **wireframes**, **wireflows** et **user stories**, qui ont permis de définir la structure, l'ergonomie et l'expérience utilisateur de la maquette.
+Le site a été réalisé à l'aide du framework W3CSS et à partir de **wireframes**, **wireflows** et **user stories**, qui ont permis de définir la structure, l'ergonomie et l'expérience utilisateur de la maquette.
 
 
 ## Fonctionnalités de la maquette
